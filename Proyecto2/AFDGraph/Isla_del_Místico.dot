@@ -1,0 +1,25 @@
+digraph "Isla del Místico" {
+    rankdir=LR;
+    label="Mapa: Isla del Místico";
+    labelloc=t;
+    node [style=filled];
+
+    // ========== LUGARES ==========
+    "Playa" [shape=ellipse, fillcolor=lightblue, label="Playa\n(playa)"];
+    "Cueva" [shape=box, fillcolor=gray, label="Cueva\n(cueva)"];
+    "Templo" [shape=octagon, fillcolor=gold, label="Templo\n(templo)"];
+    "Isla" [shape=invtriangle, fillcolor=lightgoldenrod, label="Isla\n(isla)"];
+    "Pueblo" [shape=house, fillcolor=burlywood, label="Pueblo\n(pueblo)"];
+
+    // ========== CONEXIONES ==========
+    "Playa" -> "Cueva" [label="sendero", style=dotted, color=gray];
+    "Cueva" -> "Templo" [label="puente", style=solid, color=black];
+    "Isla" -> "Playa" [label="lancha", style=dashed, color=deepskyblue];
+    "Pueblo" -> "Templo" [label="carretera", style=dashed, color=saddlebrown];
+
+    // ========== OBJETOS ==========
+    "Tesoro" [shape=box3d, fillcolor=gold, label="Tesoro"];
+    "Cueva" -> "Tesoro" [style=dotted, label="en"];
+    "Llave" [shape=pentagon, fillcolor=lightsteelblue, label="Llave"];
+    "Libro" [shape=note, fillcolor=navajowhite, label="Libro"];
+}

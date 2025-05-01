@@ -1,0 +1,34 @@
+digraph "Aventura en la Jungla" {
+    rankdir=LR;
+    label="Mapa: Aventura en la Jungla";
+    labelloc=t;
+    node [style=filled];
+
+    // ========== LUGARES ==========
+    "Entrada" [shape=parallelogram, fillcolor=forestgreen, label="Entrada\n(jungla)"];
+    "Rio" [shape=ellipse, fillcolor=white, label="Rio\n(rio)"];
+    "Montana" [shape=ellipse, fillcolor=white, label="Montana\n(montana)"];
+    "Volcan" [shape=ellipse, fillcolor=white, label="Volcan\n(volcan)"];
+    "Aldea" [shape=house, fillcolor=burlywood, label="Aldea\n(pueblo)"];
+    "IslaMisteriosa" [shape=invtriangle, fillcolor=lightgoldenrod, label="IslaMisteriosa\n(isla)"];
+
+    // ========== CONEXIONES ==========
+    "Entrada" -> "Rio" [label="sendero", style=dotted, color=gray];
+    "Rio" -> "Montana" [label="camino", style=solid, color=black];
+    "Montana" -> "Volcan" [label="puente", style=solid, color=black];
+    "Aldea" -> "Montana" [label="carretera", style=dashed, color=saddlebrown];
+    "Aldea" -> "IslaMisteriosa" [label="lancha", style=dashed, color=deepskyblue];
+    "IslaMisteriosa" -> "Volcan" [label="teleferico", style=solid, color=black];
+
+    // ========== OBJETOS ==========
+    "Tesoro antiguo" [shape=box3d, fillcolor=gold, label="Tesoro antiguo"];
+    "Montana" -> "Tesoro antiguo" [style=dotted, label="en"];
+    "Llave magica" [shape=pentagon, fillcolor=lightsteelblue, label="Llave magica"];
+    "Libro sagrado" [shape=note, fillcolor=navajowhite, label="Libro sagrado"];
+    "Aldea" -> "Libro sagrado" [style=dotted, label="en"];
+    "Trampa mortal" [shape=hexagon, fillcolor=crimson, label="Trampa mortal"];
+    "Rio" -> "Trampa mortal" [style=dotted, label="en"];
+    "Pocion curativa" [shape=box, fillcolor=white, label="Pocion curativa"];
+    "Gema roja" [shape=egg, fillcolor=deepskyblue, label="Gema roja"];
+    "IslaMisteriosa" -> "Gema roja" [style=dotted, label="en"];
+}

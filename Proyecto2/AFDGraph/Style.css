@@ -1,0 +1,49 @@
+body{
+    background-image: url(https://scontent.fgua3-4.fna.fbcdn.net/v/t39.30808-6/486690990_9631545206891025_4407597773846441139_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9wvREcCBkDwQ7kNvwEloYWc&_nc_oc=Adl3x8mOupRX3C9hVXArYSV1xktcSaOe6skm2eY3F6Djrc-8pyjaeVRFFed6-0CWezKvKD2GNdhdupHPjnEx4zm1&_nc_zt=23&_nc_ht=scontent.fgua3-4.fna&_nc_gid=nmJQNfvQFr88FadAaTWsUQ&oh=00_AfGOM0D76pbAcNcrkt3vmPyjIKeWLI3bpxTFbBg_-4acgA&oe=6808ACA3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Cambiamos cover por contain */
+    background-attachment: fixed; /* Opcional para efecto parallax */
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Asegurar relación de aspecto para móviles */
+    aspect-ratio: 16/9;
+    
+    /* Centrado absoluto como respaldo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: #ff0000;
+    text-align: center;
+}
+p{
+    color: #ff0000;
+    text-align: center;
+}
+.img{
+    height: 300px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro al 50% de opacidad */
+    color: white; /* Texto legible sobre fondo oscuro */
+    padding: 20px;
+    border-start-start-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carnet{
+    height: 300px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro al 50% de opacidad */
+    color: white; /* Texto legible sobre fondo oscuro */
+    padding: 20px;
+    border-end-end-radius: 8px;
+}
+.ico{
+    height: 200px;
+    width: 200px;
+    
+}

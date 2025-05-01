@@ -1,0 +1,31 @@
+digraph "Expedicion Volcanica" {
+    rankdir=LR;
+    label="Mapa: Expedicion Volcanica";
+    labelloc=t;
+    node [style=filled];
+
+    // ========== LUGARES ==========
+    "Base" [shape=ellipse, fillcolor=white, label="Base\n(volcan)"];
+    "Pantano" [shape=trapezium, fillcolor=darkseagreen, label="Pantano\n(pantano)"];
+    "Jungla" [shape=parallelogram, fillcolor=forestgreen, label="Jungla\n(jungla)"];
+    "TemploAntiguo" [shape=octagon, fillcolor=gold, label="TemploAntiguo\n(templo)"];
+    "RioProfundo" [shape=ellipse, fillcolor=white, label="RioProfundo\n(rio)"];
+    "CuevaOculta" [shape=box, fillcolor=gray, label="CuevaOculta\n(cueva)"];
+
+    // ========== CONEXIONES ==========
+    "Base" -> "Pantano" [label="nado", style=solid, color=darkgray];
+    "Pantano" -> "Jungla" [label="sendero", style=dotted, color=gray];
+    "Jungla" -> "TemploAntiguo" [label="puente", style=solid, color=black];
+    "TemploAntiguo" -> "CuevaOculta" [label="camino", style=solid, color=black];
+    "RioProfundo" -> "Base" [label="carretera", style=dashed, color=saddlebrown];
+    "CuevaOculta" -> "RioProfundo" [label="teleferico", style=solid, color=black];
+
+    // ========== OBJETOS ==========
+    "Gema azul" [shape=egg, fillcolor=deepskyblue, label="Gema azul"];
+    "Arma legendaria" [shape=diamond, fillcolor=orangered, label="Arma legendaria"];
+    "Jungla" -> "Arma legendaria" [style=dotted, label="en"];
+    "Bandera de conquista" [shape=tab, fillcolor=white, label="Bandera de conquista"];
+    "TemploAntiguo" -> "Bandera de conquista" [style=dotted, label="en"];
+    "Herramienta rota" [shape=folder, fillcolor=darkkhaki, label="Herramienta rota"];
+    "CuevaOculta" -> "Herramienta rota" [style=dotted, label="en"];
+}
